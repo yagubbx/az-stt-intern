@@ -58,6 +58,10 @@ Wav2Vec2 əsasında Azərbaycan dili üçün ASR pipeline — baza inferensi, fi
 ```
 az-stt-intern/
 ├── part_a/
+│   ├── my_audio/
+│   │   ├── 1.wav
+│   │   ├── ...
+│   │   └── 14.wav
 │   └── inference.py
 ├── part_b/
 │   └── fine_tune.ipynb

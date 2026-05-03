@@ -1,0 +1,15 @@
+File,Reference,Prediction,WER,CER
+1.wav,mənim ixtisasım süni intellekt mühəndisliyidir,mənin ixtisasım suyni intellekt müəndisi idir,0.8,0.13043478260869565
+2.wav,mənim komputerim cox güclü işləyir,mənim kompüterim çox güclişləyir,0.8,0.11764705882352941
+3.wav,mən bu tapşiriği uğurla tamamlamaq istəyirəm,mən bu tapşırığı uğurla tamamlamaq istəyirəm,0.16666666666666666,0.06818181818181818
+4.wav,speech recognition real dünyada geniş istifadə olunur,spitç rəkoqnetion real dünyada geniş istifadə olunur,0.2857142857142857,0.1509433962264151
+5.wav,mən data mühəndisliyi ilə məşğulam,mən dahata mühəndislii ilə məşğulam,0.4,0.08823529411764706
+6.wav,mən öz uzərimdə çox çalışıram,mən öz üzərində çox çalışıram,0.2,0.06896551724137931
+7.wav,süni intellekt insan nitqini analiz edə bilir,sun intellekt insan nitqini analiz edə bilir,0.14285714285714285,0.044444444444444446
+8.wav,bu model səsi mətnə çevirir,bu mode səsi mətnəd sevirik,0.6,0.14814814814814814
+9.wav,mən tələbəyəm,mən tələbəyəm,0.0,0.0
+10.wav,maşın öyrənməsi çox güclü sahədir,maşın öyrənməsi çox güclü sahədir,0.0,0.0
+11.wav,proqramlaşdırma mənim üçün maraqlıdır,proqramlaşdırma mənim üçün maraqlıdır,0.0,0.0
+12.wav,mən süni intellekt akademiyasında təhsil alıram,mən suyni intellekt akademiyasına təhsil alıram,0.3333333333333333,0.06382978723404255
+13.wav,mən avtomatik nitq tanıma sistemi hazırlayıram,mən avtomatik nitq tanıma sistemi hazırlayıram,0.0,0.0
+14.wav,bu model müxtəlif səsləri tanımağa çalışır,bu model müxtəlif səsləri tanımğa salışır,0.3333333333333333,0.047619047619047616

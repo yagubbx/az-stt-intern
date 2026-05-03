@@ -1,0 +1,10 @@
+torch
+datasets
+pandas
+librosa
+soundfile
+transformers
+accelerate
+evaluate
+jiwer
+matplotlib

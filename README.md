@@ -1,6 +1,6 @@
-# Azərbaycan Dili üçün Nitq Tanıma Sistemi
+# Azərbaycan Dili üçün Nitq Tanıma (ASR)
 
-Wav2Vec2 modeli əsasında Azərbaycan dili üçün ASR pipeline. Baza inferensi, fine-tuning və performans qiymətləndirməsini əhatə edir.
+Wav2Vec2 əsasında Azərbaycan dili üçün ASR pipeline — baza inferensi, fine-tuning və performans qiymətləndirməsini əhatə edir.
 
 ---
 
@@ -24,10 +24,23 @@ Wav2Vec2 modeli əsasında Azərbaycan dili üçün ASR pipeline. Baza inferensi
 
 ### Hissə A — Baza model (14 əl ilə qeyd edilmiş audio)
 
-| Metrika | Nəticə |
-|---|---|
-| Ortalama WER | 29.01% |
-| Ortalama CER | 6.63% |
+| Fayl | WER | CER |
+|---|---|---|
+| 1.wav | 80.0% | 13.0% |
+| 2.wav | 80.0% | 11.8% |
+| 3.wav | 16.7% | 6.8% |
+| 4.wav | 28.6% | 15.1% |
+| 5.wav | 40.0% | 8.8% |
+| 6.wav | 20.0% | 6.9% |
+| 7.wav | 14.3% | 4.4% |
+| 8.wav | 60.0% | 14.8% |
+| 9.wav | 0.0% | 0.0% |
+| 10.wav | 0.0% | 0.0% |
+| 11.wav | 0.0% | 0.0% |
+| 12.wav | 33.3% | 6.4% |
+| 13.wav | 0.0% | 0.0% |
+| 14.wav | 33.3% | 4.8% |
+| **Ortalama** | **29.0%** | **6.6%** |
 
 ### Hissə B — Fine-tuning müqayisəsi (tahmaz/azerbaijani-asr-fl, 120 nümunə)
 
@@ -36,7 +49,7 @@ Wav2Vec2 modeli əsasında Azərbaycan dili üçün ASR pipeline. Baza inferensi
 | Baseline | 39.27% |
 | Fine-tuned | 47.12% |
 
-> Bu layihədə Azərbaycan dili üçün tam ASR pipeline-ı qurmağa çalışdım. Hissə A-da dataset əvəzi 14 əl ilə qeyd edilmiş audio üzərində WER 29.01%, CER 6.63% nəticəsi göstərib. Hissə B-də Google Colab T4 GPU üzərində fine-tuning pipeline qurulub, VRAM məhdudiyyətlərini həll edən optimallaşdırmalar aparılıb. Fine-tuning nəticəsinin baseline-dan aşağı olmaması üçün daha çox data və epoch lazımdır, bu texniki xəta deyil, resurs məsələsidir
+> Fine-tuned modelin WER-i baseline-dan yüksək çıxıb. Bu texniki xəta deyil — resurs məhdudiyyətindən (cəmi 120 nümunə, 2 epoch) irəli gəlir. Daha çox data və epoch ilə nəticə yaxşılaşacaq.
 
 ---
 
@@ -47,10 +60,10 @@ az-stt-intern/
 ├── part_a/
 │   └── inference.py
 ├── part_b/
-│   └── fine_tuning.ipynb
+│   └── fine_tune.ipynb
 ├── results/
 │   ├── metrics.csv
-│   └── training_plot.png
+│   └── progress_graph.png
 ├── report.pdf
 ├── requirements.txt
 └── README.md
@@ -66,11 +79,11 @@ pip install -r requirements.txt
 
 **Hissə A:**
 ```bash
-# my_audio/ qovluğunu yarat, içinə 1.wav–14.wav fayllarını at
+# my_audio/ qovluğunu yarat, 1.wav–14.wav fayllarını içinə at
 python part_a/inference.py
 # Nəticə: results/metrics.csv
 ```
 
 **Hissə B:**
 
-`part_b/fine_tuning.ipynb` faylını Google Colab-da aç, Runtime → T4 GPU seç, cell-ləri ardıcıl işlət.
+`part_b/fine_tune.ipynb` faylını Google Colab-da aç, Runtime → T4 GPU seç, cell-ləri ardıcıl işlət.

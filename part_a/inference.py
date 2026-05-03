@@ -34,7 +34,7 @@ def main():
         "14.wav": "bu model müxtəlif səsləri tanımağa çalışır"
     }
     
-    audio_folder = "my_audio"
+    audio_folder = "part_a/my_audio"
     
     if not os.path.exists(audio_folder):
         print(f"'{audio_folder}' qovluğu yoxdur. yaradin ve sesleri icine elave edin. (wav formatinda)")
